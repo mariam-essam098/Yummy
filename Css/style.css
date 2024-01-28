@@ -1,0 +1,194 @@
+/* global */
+[data-theme="dark"] {
+    --main-color: #6A1B9A;
+    --second-color: #A70000;
+    --color-text: #fff;
+    --btn-main-color: #FFAB1B;
+    --layer-color: rgba(201, 193, 193, 0.705);
+}
+
+[data-theme="light"] {
+    --main-color: #eeeeee;
+    --second-color: #81689D;
+    --color-text: #1F2544;
+    --btn-main-color: #762af8;
+    --layer-color: rgba(249, 246, 246, 0.792);
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: display 0.5s;
+}
+
+/* scroll bar  */
+::-webkit-scrollbar {
+    width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--second-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FFD700;
+    border-radius: 50px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 0.5) inset;
+}
+
+
+body {
+
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: var(--main-color);
+    color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Lobster', cursive;
+    color: var(--color-text) !important;
+}
+
+.main-btn {
+    background-color: var(--btn-main-color);
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+.btn {
+    background-color: var(--btn-main-color);
+    color: var(--color-text);
+}
+
+.btn:hover {
+    color: var(--color-text);
+}
+
+.main-btn:hover {
+    filter: grayscale(0.5);
+}
+
+/* light dark mode  */
+#mode {
+    z-index: 100;
+}
+
+#fixedButton {
+    z-index: 100;
+}
+
+/* navBar */
+.navSide {
+    background-color: var(--main-color);
+    color: var(--color-text);
+}
+
+.logo {
+    width: 50px;
+}
+
+i {
+    cursor: pointer;
+}
+
+.navBar {
+    z-index: 99;
+    margin-left: 0;
+    left: 0;
+
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.nav-header {
+    background-color: var(--color-text);
+    color: var(--main-color);
+}
+
+
+.footer {
+    font-size: 12px;
+}
+
+/* meals  */
+
+.meal h3 {
+    color: var(--main-color);
+}
+
+.meal p {
+    color: var(--second-color);
+}
+
+.meal-layer {
+    width: 100%;
+    height: 100%;
+    background-color: var(--layer-color);
+    top: 100%;
+    transition: .5s;
+}
+
+.meal:hover .meal-layer {
+    top: 0;
+}
+
+.alert {
+    width: fit-content;
+}
+
+.flagIcon {
+    color: var(--second-color);
+}
+
+#searchContainer .form-control {
+    color: var(--color-text) !important;
+}
+
+#searchContainer {
+    margin-left: 60px;
+}
+
+.alert-info {
+    color: var(--color-text) !important;
+    background-color: var(--second-color) !important;
+    border-color: var(--second-color) !important;
+
+}
+
+/* contact us  */
+
+#toggler,
+#togglerRepass {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    transform: translateY(-25%);
+    color: var(--main-color);
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* loading screen */
+.loading {
+    position: fixed;
+    z-index: 99999999999999999;
+    inset: 0;
+    background: #6A1B9A;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
